@@ -28,9 +28,23 @@ body {
 
 }
 
-h1 {
-    font-size: 40px;
-    margin-bottom: 30px;
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+h1.lista-da-fare {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+h1.lista-finiti {
+    font-size: 55px;
+}
+
+h2 {
+    opacity: 0.75;
 }
 
 input.scrivi-task {

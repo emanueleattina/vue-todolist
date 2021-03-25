@@ -23,7 +23,12 @@
     <div id="root">
         <div class="big-container">
             <div class="container">
-                <h1>da fare</h1>
+
+                <div class="title-container">
+                    <h1 class="lista-da-fare">da fare</h1>
+                    <h2>numero task: {{ todoSospesi.length }}</h2>
+                </div>
+                
 
                 <!-- v-model ha come val la chiave presente nell'oggetto data -->
                 <!-- @keyup.enter fa partire la funzione "aggiungi" quando premo invio -->
@@ -57,7 +62,10 @@
                 </div>
             </div>
             <div class="container" v-if="todoFiniti.length > 0">
-                <h1>fatto</h1>
+                <div class="title-container">
+                    <h1 class="lista-finiti">fatto</h1>
+                    <h2>numero task: {{ todoFiniti.length }}</h2>
+                </div>
                 
                 <!-- v-for stampa con ciclo for i nuovi oggetti dell'array todoList -->
                 <div class="lista-todo" v-for="todo in todoFiniti">
