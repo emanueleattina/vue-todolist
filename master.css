@@ -62,4 +62,38 @@ input {
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.bottoni {
+    display: flex;
+}
+
+.fatto {
+    height: 50px;
+    border: none;
+    color: #fff;
+    padding: 0 15px;
+    background: linear-gradient(145deg, #007599, #006281);
+}
+
+.edit {
+    height: 50px;
+    border: none;
+    color: #fff;
+    padding: 0 15px;
+    background: linear-gradient(145deg, #007599, #006281);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.fatto:hover, .edit:hover {
+    background: #006d8f;
+    box-shadow: inset 7px 7px 13px #005d7a,
+                inset -7px -7px 13px #007da4;
+}
+
+.barrato {
+    text-decoration: line-through;
+    opacity: 0.5;
 }

@@ -36,7 +36,10 @@
                 <div class="lista-todo" v-for="todo in todoList">
 
                     <!-- todo sono gli item e title è la chiave degli oggetti nell'array todoList -->
-                    <span>{{ todo.title }}</span>
+                    <span :class="fatto">{{ todo.title }}</span>
+                    <div class="bottoni">
+                        <button @click="fatto" class="fatto">fatto</button>
+                        <button class="edit">edit</button></div>
                 </div>
             </div>
         </div>
