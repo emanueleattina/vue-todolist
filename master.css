@@ -98,7 +98,16 @@ input.scrivi-task {
     border-bottom-right-radius: 30px;
 }
 
-.fatto:hover, .edit:hover, .canc:hover {
+.indietro {
+    height: 50px;
+    border: none;
+    color: #fff;
+    padding: 0 15px;
+    background: linear-gradient(145deg, #007599, #006281);
+}
+
+
+.fatto:hover, .edit:hover, .canc:hover, .indietro:hover {
     background: #006d8f;
     box-shadow: inset 7px 7px 13px #005d7a,
                 inset -7px -7px 13px #007da4;

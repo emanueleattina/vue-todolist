@@ -54,6 +54,10 @@ var app = new Vue({
             let i = this.todoList.indexOf(todo);
             this.todoList.splice(i, 1);
         },
+        indietro: function(todo) {
+            let i = this.todoList.indexOf(todo);
+            this.todoList[i].done = 'daFare';
+        },
         edit: function(todo) {
             let i = this.todoList.indexOf(todo);
             this.todoList[i].modifica = 'mostra';
