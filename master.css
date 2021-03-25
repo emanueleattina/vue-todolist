@@ -31,7 +31,7 @@ h1 {
     font-size: 40px;
 }
 
-input {
+input.scrivi-task {
     height: 50px;
     background-color: rgba(255, 255, 255, 0.05);
     border: none;
@@ -87,13 +87,43 @@ input {
     border-bottom-right-radius: 30px;
 }
 
-.fatto:hover, .edit:hover {
+.canc {
+    height: 50px;
+    border: none;
+    color: #fff;
+    padding: 0 15px;
+    background: linear-gradient(145deg, #007599, #006281);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.fatto:hover, .edit:hover, .canc:hover {
     background: #006d8f;
     box-shadow: inset 7px 7px 13px #005d7a,
                 inset -7px -7px 13px #007da4;
 }
 
-.barrato {
+.finito {
     text-decoration: line-through;
     opacity: 0.5;
+}
+
+.nascondi {
+    display: none;
+}
+
+.mostra {
+    display: flex;
+    align-items: center;
+}
+
+input.edit-task {
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-radius: 30px;
+    color: rgba(255, 255, 255, 0.623);
+    font-size: 23.4px;
+    /* padding-left: 20px; */
+    width: 100%;
 }
