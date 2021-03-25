@@ -19,9 +19,28 @@
 </head>
 <body>
     
+    <!-- "root" permette di collegare il div a vue in main.js -->
     <div id="root">
+        <div class="big-container">
+            <div class="container">
+                <h1>cose da fare</h1>
+
+                <!-- v-model ha come val la chiave presente nell'oggetto data -->
+                <!-- @keyup.enter fa partire la funzione "aggiungi" quando premo invio -->
+                <input
+                v-model="inputTodo"
+                placeholder="che devi fare?"
+                @keyup.enter="aggiungi">
+                
+                <!-- v-for stampa con ciclo for i nuovi oggetti dell'array todoList -->
+                <div class="lista-todo" v-for="todo in todoList">
+
+                    <!-- todo sono gli item e title è la chiave degli oggetti nell'array todoList -->
+                    <span>{{ todo.title }}</span>
+                </div>
+            </div>
+        </div>
         
-    </div>
 
 
     <!-- link a vue e main js -->
