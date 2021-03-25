@@ -23,7 +23,7 @@
     <div id="root">
         <div class="big-container">
             <div class="container">
-                <h1>cose da fare</h1>
+                <h1>da fare</h1>
 
                 <!-- v-model ha come val la chiave presente nell'oggetto data -->
                 <!-- @keyup.enter fa partire la funzione "aggiungi" quando premo invio -->
@@ -34,7 +34,7 @@
                 @keyup.enter="aggiungi">
                 
                 <!-- v-for stampa con ciclo for i nuovi oggetti dell'array todoList -->
-                <div class="lista-todo" v-for="todo in todoList">
+                <div class="lista-todo" v-for="todo in todoSospesi">
 
                     <!-- todo sono gli item e title è la chiave degli oggetti nell'array todoList -->
                     <span v-if="todo.modifica == 'nascondi' " :class="todo.done">{{ todo.title }}</span>
@@ -56,6 +56,31 @@
                     </div>
                 </div>
             </div>
+            <div class="container" v-if="todoFiniti.length > 0">
+                <h1>fatto</h1>
+                
+                <!-- v-for stampa con ciclo for i nuovi oggetti dell'array todoList -->
+                <div class="lista-todo" v-for="todo in todoFiniti">
+
+                    <!-- todo sono gli item e title è la chiave degli oggetti nell'array todoList -->
+                    <span v-if="todo.modifica == 'nascondi' " :class="todo.done">{{ todo.title }}</span>
+
+                    <input
+                        class="edit-task"
+                        v-model="todo.title"
+                        @keyup.enter="endEdit(todo)"
+                        :class="todo.modifica">
+
+                    <div class="bottoni">
+
+                        <!-- con v-if verifico se c'è la classe barrato -->
+                        <button v-if="todo.done != 'finito'" @click="fatto(todo)" class="fatto">fatto</button>
+                        <button v-if="todo.done != 'finito'" @click="edit(todo)" class="edit" >edit</button>
+
+                        <!-- con v-else faccio apparire il tasto canc quando span è barrato -->
+                        <button v-else class="canc" @click="cancella(todo)">canc</button>
+                    </div>
+                </div>
         </div>
     </div>
         

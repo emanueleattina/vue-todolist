@@ -6,7 +6,7 @@ var app = new Vue({
         todoList: [
             {
                 title: 'leggere',
-                done: '',
+                done: 'daFare',
                 modifica: 'nascondi'
             },
             {
@@ -16,17 +16,30 @@ var app = new Vue({
             },
             {
                 title: 'dormire',
-                done: '',
+                done: 'daFare',
                 modifica: 'nascondi'
             }
         ]
     },
-    methods : {
+    //computed fa il calcolo del data, lo modifica e ritorna il valore ricalcolato
+    computed: {
+        todoFiniti: function () {
+            let todoFiniti = this.todoList.filter((todo) => todo.done == 'finito');
+
+            return todoFiniti;
+        },
+        todoSospesi: function () {
+            let todoSospesi = this.todoList.filter((todo) => todo.done == 'daFare');
+
+            return todoSospesi;
+        }
+    },
+    methods: {
         aggiungi: function() {
             if(this.inputTodo != '') {
                 let ogg = {
                     title: this.inputTodo,
-                    done: '',
+                    done: 'daFare',
                     modifica: 'nascondi'
                 }
             this.todoList.push(ogg);
