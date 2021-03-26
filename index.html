@@ -60,9 +60,8 @@
                         <button v-else class="canc" @click="cancella(todo)">canc</button>
                     </div>
                 </div>
-            </div>
-            <div class="container" v-if="todoFiniti.length > 0">
-                <div class="title-container">
+
+                <div class="title-container" v-if="todoFiniti.length > 0">
                     <h1 class="lista-finiti">fatto</h1>
                     <h2>numero di task: {{ todoFiniti.length }}</h2>
                 </div>
@@ -90,6 +89,9 @@
                         <button class="canc" @click="cancella(todo)">canc</button>
                     </div>
                 </div>
+            </div>
+            <!-- <div class="container" v-if="todoFiniti.length > 0"></div> -->
+                
         </div>
     </div>
         
