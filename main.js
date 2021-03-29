@@ -25,7 +25,7 @@ var app = new Vue({
     computed: {
         todoFiniti: function () {
             let todoFiniti = this.todoList.filter((todo) => todo.done == 'finito');
-
+            console.log('ciao');
             return todoFiniti;
         },
         todoSospesi: function () {
